@@ -4,6 +4,8 @@ Bluetooth firmware for the Mitosis keyboard (right half runs Bluetooth client an
 
 ## Disclaimer
 
+**There's an [nRF5x QMK fork](https://github.com/sekigon-gonnoc/qmk_firmware/tree/nrf52) for bluetooth split keyboards (see [my fork](https://github.com/joric/qmk_firmware/commit/7c3faafc45a6e055020e95c1c9b4c69062973173) also). This software is about to be deprecated.**
+
 The security is still limited to hardcoded 32-bit Gazell channel numbers (0x01020304 and 0x05060708, please change them in the code).
 [BlueMicro_BLE](https://github.com/jpconstantineau/BlueMicro_BLE) firmware uses 128-bit UUID and BLEUart instead of Gazell, but it does not support nRF51822.
 
@@ -301,7 +303,8 @@ BlueMicro is open source, official repositories are [BlueMicro_BLE] (firmware) a
 
 * [My fork of the Mitosis repository (bonus documentation included)](https://github.com/joric/mitosis/tree/devel)
 * [Mitosis bluetooth firmware for SDK 11 (now deprecated)](https://github.com/joric/mitosis/tree/devel/mitosis-bluetooth)
-* [Reddit thread](https://redd.it/91s4pu)
+* [Reddit thread about Bluetosis](https://redd.it/91s4pu)
+* [Reddit thread about nRF5x QMK fork](https://redd.it/ava64y)
 
 [Blackmagic]: https://github.com/blacksphere/blackmagic
 [Bluepill]: https://www.aliexpress.com/item//32583160323.html
