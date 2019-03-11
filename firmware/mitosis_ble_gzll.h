@@ -4,10 +4,14 @@
 #include "nrf_drv_rtc.h"
 #include "nrf_soc.h"
 
-#ifdef COMPILE_REVERSED
-#define COMPILE_LEFT
-#else
-#define COMPILE_RIGHT
+#ifdef COMPILE_LEFT
+#define LED_DATA_PIN 19
+#define DEBUG_PIN 21
+#endif
+
+#ifdef COMPILE_RIGHT
+#define LED_DATA_PIN 21
+#define DEBUG_PIN 19
 #endif
 
 #include "mitosis.h"
@@ -17,7 +21,7 @@
 #include "neopixel.h"
 
 neopixel_strip_t m_strip;
-uint8_t dig_pin_num = 21;
+uint8_t dig_pin_num = LED_DATA_PIN;
 uint8_t leds_per_strip = 22;
 uint8_t error;
 uint8_t led_to_enable = 0;
@@ -101,7 +105,7 @@ radio_mode_t running_mode = BLE;
 #undef HWFC
 
 #define RX_PIN_NUMBER  -1
-#define TX_PIN_NUMBER  19 // pin19 == S15 (jorian)
+#define TX_PIN_NUMBER DEBUG_PIN // pin19 == S15 (jorian)
 #define CTS_PIN_NUMBER -1
 #define RTS_PIN_NUMBER -1
 #define HWFC false

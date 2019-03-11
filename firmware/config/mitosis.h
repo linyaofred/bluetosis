@@ -1,10 +1,6 @@
+//#define COMPILE_LEFT
+#define COMPILE_RIGHT
 
-#define HAND_SENSE 12
-#define RIGHT_HAND false
-#define LEFT_HAND true
-
-#define ALPHA_SENSE 20
-#define ALPABETICAL false
 
 // left hand pins
 
@@ -35,28 +31,28 @@
 #define L_S23 19
 
 #define L_MASK (1<<L_S01 | \
- 				1<<L_S02 | \
-				1<<L_S03 | \
-				1<<L_S04 | \
-				1<<L_S05 | \
-				1<<L_S06 | \
-				1<<L_S07 | \
-				1<<L_S08 | \
-				1<<L_S09 | \
-				1<<L_S10 | \
-				1<<L_S11 | \
-				1<<L_S12 | \
-				1<<L_S13 | \
-				1<<L_S14 | \
-				1<<L_S15 | \
-				1<<L_S16 | \
-				1<<L_S17 | \
-				1<<L_S18 | \
-				1<<L_S19 | \
-				1<<L_S20 | \
-				1<<L_S21 | \
-				1<<L_S22 | \
-				1<<L_S23)
+                1<<L_S02 | \
+                1<<L_S03 | \
+                1<<L_S04 | \
+                1<<L_S05 | \
+                1<<L_S06 | \
+                1<<L_S07 | \
+                1<<L_S08 | \
+                1<<L_S09 | \
+                1<<L_S10 | \
+                1<<L_S11 | \
+                1<<L_S12 | \
+                1<<L_S13 | \
+                1<<L_S14 | \
+                1<<L_S15 | \
+                1<<L_S16 | \
+                1<<L_S17 | \
+                1<<L_S18 | \
+                1<<L_S19 | \
+                1<<L_S20 | \
+                1<<L_S21 | \
+                1<<L_S22 | \
+                1<<L_S23)
 
 // right hand pins
 
@@ -78,7 +74,7 @@
 #define R_S14 9
 #define R_S15 19 //19 is S15 (uart) //jorian
 #define R_S16 25
-#define R_S17 0 //29 is S17 (another probe) //jorian
+#define R_S17 0  //29 is S17 (another probe) //jorian
 #define R_S18 28
 #define R_S19 30
 #define R_S20 24
@@ -87,28 +83,28 @@
 #define R_S23 0 //21 is led_data //jorian
 
 #define R_MASK (1<<R_S01 | \
- 				1<<R_S02 | \
-				1<<R_S03 | \
-				1<<R_S04 | \
-				1<<R_S05 | \
-				1<<R_S06 | \
-				1<<R_S07 | \
-				1<<R_S08 | \
-				1<<R_S09 | \
-				1<<R_S10 | \
-				1<<R_S11 | \
-				1<<R_S12 | \
-				1<<R_S13 | \
-				1<<R_S14 | \
-				1<<R_S15 | \
-				1<<R_S16 | \
-				1<<R_S17 | \
-				1<<R_S18 | \
-				1<<R_S19 | \
-				1<<R_S20 | \
-				1<<R_S21 | \
-				1<<R_S22 | \
-				1<<R_S23)
+                1<<R_S02 | \
+                1<<R_S03 | \
+                1<<R_S04 | \
+                1<<R_S05 | \
+                1<<R_S06 | \
+                1<<R_S07 | \
+                1<<R_S08 | \
+                1<<R_S09 | \
+                1<<R_S10 | \
+                1<<R_S11 | \
+                1<<R_S12 | \
+                1<<R_S13 | \
+                1<<R_S14 | \
+                1<<R_S15 | \
+                1<<R_S16 | \
+                1<<R_S17 | \
+                1<<R_S18 | \
+                1<<R_S19 | \
+                1<<R_S20 | \
+                1<<R_S21 | \
+                1<<R_S22 | \
+                1<<R_S23)
 
 #ifdef COMPILE_LEFT
 
@@ -142,7 +138,7 @@
 
 #define INPUT_MASK L_MASK
 
-#endif
+#endif // COMPILE_LEFT
 
 #ifdef COMPILE_RIGHT
 
@@ -176,7 +172,7 @@
 
 #define INPUT_MASK R_MASK
 
-#endif
+#endif // COMPILE_RIGHT
 
 
 
