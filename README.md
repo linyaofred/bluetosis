@@ -4,7 +4,9 @@ Bluetooth firmware for the Mitosis keyboard (right half runs Bluetooth client an
 
 ## Disclaimer
 
-**There's an [nRF5x QMK fork](https://github.com/sekigon-gonnoc/qmk_firmware/tree/nrf52) for bluetooth split keyboards (see [my fork](https://github.com/joric/qmk_firmware/commit/7c3faafc45a6e055020e95c1c9b4c69062973173) also). This software is about to be deprecated.**
+**This software ALSO supports Mitosis receiver (there's a shortcut for switching between Bluetooth and receiver modes).**
+
+**This software DOES NOT support QMK. There's native [nRF5x QMK fork](https://github.com/sekigon-gonnoc/qmk_firmware/tree/nrf52) for bluetooth split keyboards (see [my fork](https://github.com/joric/qmk_firmware/commit/7c3faafc45a6e055020e95c1c9b4c69062973173) also).**
 
 The security is still limited to hardcoded 32-bit Gazell channel numbers (0x01020304 and 0x05060708, please change them in the code).
 [BlueMicro_BLE](https://github.com/jpconstantineau/BlueMicro_BLE) firmware uses 128-bit UUID and BLEUart instead of Gazell, but it does not support nRF51822.
@@ -14,7 +16,6 @@ that have 32KB of RAM. I write and debug on YJ-14015 so it probably will work wi
 
 Battery life was not really tested but the keyboard turns completely off after a few minutes of inactivity
 and wakes up on hardware interrupt (any key) so it should be fine.
-
 ## Precompiled Firmware
 
 Bluetosis firmware does NOT come with the softdevice because it would violate Nordic redistribution terms, download
